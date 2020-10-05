@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".client.fragment.DashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="30dp"
+        android:background="@drawable/rectangle">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDashpend"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="25dp"
+            android:elevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@drawable/shape_red">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ciDashPending"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:padding="5dp"
+                    android:src="@drawable/payment_red"
+                    android:background="@drawable/circle_white">
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:id="@+id/tvDashpending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:textSize="20sp"
+                    android:text="Pending Payments"
+                    android:textColor="@color/colorWhite">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tvDashruppen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:textSize="20sp"
+                        android:text="₹"
+                        android:textColor="@color/colorWhite"
+                        ></TextView>
+
+                    <TextView
+                        android:id="@+id/tvDashpendMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:inputType="number"
+                        android:text="2000"
+                        android:textColor="@color/colorWhite"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top 5 Notifications"
+            android:layout_gravity="start"
+            android:fontFamily="@font/futura_medium_bt"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:layout_marginTop="35dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notificationRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>
+
+
+

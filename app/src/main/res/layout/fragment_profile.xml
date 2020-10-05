@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context=".client.fragment.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_margin="30dp">
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+           android:layout_marginTop="5dp"
+            android:src="@drawable/back" />
+
+        <TextView
+           android:id="@+id/tvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/futura_medium_bt"
+            android:text=" Profile"
+            android:textColor="@color/colorWhite">
+        </TextView>
+    </LinearLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rectangle"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvYourp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:text="Your Profile"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="Name:"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvNameValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:hint="sample Name"
+                        android:textSize="18sp"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:background="@drawable/bg_edittext_transparent"></TextView>
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/tvMobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="Mobile Number:"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvMobValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:hint="sample number"
+                        android:inputType="phone"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:background="@drawable/bg_edittext_transparent"></TextView>
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="Email:"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvEmailValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:hint="sample Email"
+                        android:inputType="textEmailAddress"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:background="@drawable/bg_edittext_transparent"></TextView>
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/tvAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="Address:"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvAddressValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:hint="sample Address"
+                        android:textSize="18sp"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:background="@drawable/bg_edittext_transparent"></TextView>
+
+                    <View
+                        android:id="@+id/divider4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="?android:attr/listDivider" />
+
+
+                    <TextView
+                        android:id="@+id/btnEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:background="@drawable/button"
+                        android:layout_margin="40dp"
+                        android:gravity="center"
+                        android:text="Edit Profile"
+                        android:textColor="@color/colorWhite"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:textAllCaps="false"></TextView>
+
+                </LinearLayout>
+            </ScrollView>
+    </LinearLayout>
+</FrameLayout>
+
+

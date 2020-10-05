@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1063569678086",
+    "firebase_url": "https://kgsapp-1fb6b.firebaseio.com",
+    "project_id": "kgsapp-1fb6b",
+    "storage_bucket": "kgsapp-1fb6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063569678086:android:30491daa73a0b71efd4887",
+        "android_client_info": {
+          "package_name": "com.tetravalstartups.kgs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063569678086-jttu8du2plceg0s15ia07ur20o0vav8n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tetravalstartups.kgs",
+            "certificate_hash": "7651483248dfaf51d0741efafd38fdc56395fa62"
+          }
+        },
+        {
+          "client_id": "1063569678086-qcijr70u9vcpqq3qfpr8oka8p9glveq7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIYhFtYUcM4oyI_qxgPuDpLHdz0IIFijU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063569678086-qcijr70u9vcpqq3qfpr8oka8p9glveq7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBlack"
+    tools:context=".staff.Staffassign_paymentsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30dp">
+
+        <ImageView
+            android:id="@+id/ivAssignback"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/tvStaffassign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assign Payment Collection"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:fontFamily="@font/futura_medium_bt"
+            android:layout_marginStart="10dp"/>
+
+        <ImageView
+            android:id="@+id/ivStaffnoti_bell"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="40dp"
+            android:layout_gravity="end"
+            android:src="@drawable/notification"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="30dp">
+
+                <TextView
+                    android:id="@+id/tvStaffcollect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Collected Payments"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"></TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvStaffCollect"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="25dp"
+                    android:elevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="15dp"
+                        android:background="@drawable/shape_green">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ciStaffcoll_green"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="5dp"
+                            android:src="@drawable/payment_green"
+                            android:background="@drawable/circle_white">
+                        </de.hdodenhof.circleimageview.CircleImageView>
+
+
+                        <TextView
+                            android:id="@+id/tvStaffcoll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/futura_medium_bt"
+                            android:textSize="20sp"
+                            android:text="Collected Payments"
+                            android:textColor="@color/colorWhite"></TextView>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:id="@+id/tvStaffrup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/futura_medium_bt"
+                                android:textSize="20sp"
+                                android:text="₹"
+                                android:textColor="@color/colorWhite"></TextView>
+
+                            <TextView
+                                android:id="@+id/tvStaffmoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:fontFamily="@font/futura_medium_bt"
+                                android:background="@drawable/bg_edittext_transparent"
+                                android:inputType="number"
+                                android:textSize="17sp"
+                                android:text="2000"
+                                android:textColor="@color/colorWhite"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            <Spinner
+                android:id="@+id/spStaff"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+
+            <TextView
+                android:id="@+id/tvPend_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending Amount"
+                android:fontFamily="@font/futura_medium_bt"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRupay_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:text="₹"/>
+
+                <TextView
+                    android:id="@+id/tvAmount_pend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:padding="8dp"
+                    android:text="5000"
+                    android:textSize="17sp"
+                    android:textColor="@color/colorBlack" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRupay_sign1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:text="₹"/>
+
+                <EditText
+                    android:id="@+id/etEnter_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:padding="8dp"
+                    android:hint="Enter Amount"
+                    android:textSize="17sp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/grey_rectangle"/>
+            </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_Remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:padding="8dp"
+                    android:hint="Payment Remarks"
+                    android:textSize="17sp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/grey_rectangle"/>
+
+            <TextView
+                android:id="@+id/tvReceived"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:fontFamily="@font/futura_medium_bt"
+                android:text="Recieved"
+                android:textSize="17sp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:background="@drawable/button"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

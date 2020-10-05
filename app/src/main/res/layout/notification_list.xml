@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ciClient_bell"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="8dp"
+            android:src="@drawable/notification"
+            android:background="@drawable/circlular"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNotHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/bg_edittext_transparent"
+            android:textSize="17dp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/futura_medium_bt"
+            android:inputType="textPersonName"
+            android:text="Sample Notification Heading" />
+
+            <TextView
+                android:id="@+id/tvNotSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_edittext_transparent"
+                android:textSize="15dp"
+                android:fontFamily="@font/futura_medium_bt"
+                android:inputType="textPersonName"
+                android:text="Sample description" />
+
+            <EditText
+                android:id="@+id/tvClientHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/bg_edittext_transparent"
+                android:text="sample hours ago"
+                android:textSize="12dp"
+                android:fontFamily="@font/futura_medium_bt"
+                android:layout_marginTop="2dp"
+                android:inputType="time" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivClientdel"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="2dp"
+            app:srcCompat="@drawable/close" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/horDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="?android:attr/listDivider" />
+
+
+</LinearLayout>

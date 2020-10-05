@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30dp">
+
+        <TextView
+            android:id="@+id/tvDashs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Staff Dashboard"
+            android:layout_gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:fontFamily="@font/futura_medium_bt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <ImageView
+                android:id="@+id/ivnotifs"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/notification"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ciStaffprof"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/user"
+                android:background="@drawable/circle_white">
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <ImageView
+                android:id="@+id/ivStafflogout"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:gravity="end"
+                android:src="@drawable/logout_white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvComptask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_medium_bt"
+            android:text="Completed Tasks"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvComplete1"
+                android:layout_width="140dp"
+                android:layout_gravity="start"
+                android:layout_marginEnd="20dp"
+                android:fitsSystemWindows="true"
+                android:layout_height="match_parent"
+                android:elevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/grey_rectangle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCompshift1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="Shift - 1"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCompno1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="15"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="25dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCompleted2"
+                android:layout_width="140dp"
+                android:layout_gravity="end"
+                android:fitsSystemWindows="true"
+                android:elevation="20dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/grey_rectangle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCompshift2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="Shift - 2"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCompno2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="7"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="25dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvCPendtask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/futura_medium_bt"
+            android:text="Pending Tasks"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvPending1"
+                android:layout_width="140dp"
+                android:layout_marginEnd="20dp"
+                android:layout_height="match_parent"
+                android:elevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/grey_rectangle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPendshift1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="Shift - 1"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:id="@+id/tvPendno1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="15"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="25dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvPending2"
+                android:layout_width="140dp"
+                android:layout_gravity="end"
+                android:elevation="20dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/grey_rectangle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPendshift2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="Shift - 2"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:id="@+id/tvPendno2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="7"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="25dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/horStaffdivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="?android:attr/listDivider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivMoneysign"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/payment_black"/>
+
+
+        <TextView
+            android:id="@+id/tvAssignpayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_medium_bt"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="10dp"
+            android:textSize="19sp"
+            android:text="Assign Payment Collection"/>
+
+            <ImageView
+                android:id="@+id/ivStaffnext"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:src="@drawable/next"
+                android:layout_gravity="center"
+                android:layout_marginStart="40dp"/>
+        </LinearLayout>
+        <View
+            android:id="@+id/horStaffdivider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/listDivider"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivAssignfactory"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/factory_img"/>
+
+
+            <TextView
+                android:id="@+id/tvAssignfact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_medium_bt"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:layout_weight="1"
+                android:textColor="@color/colorBlack"
+                android:layout_marginStart="10dp"
+                android:textSize="19sp"
+                android:text="Assign Factory"/>
+
+            <ImageView
+                android:id="@+id/ivFactnext"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:src="@drawable/next"
+                android:layout_gravity="center"
+                android:layout_marginStart="40dp"/>
+        </LinearLayout>
+        <View
+            android:id="@+id/horStaffdiv2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/listDivider"/>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

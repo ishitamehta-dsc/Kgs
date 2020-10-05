@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context=".client.fragment.PaymentsFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+
+               <androidx.cardview.widget.CardView
+                    android:id="@+id/cdAdv"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:elevation="20dp">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:gravity="center"
+                       android:background="@drawable/shape_green">
+
+                       <de.hdodenhof.circleimageview.CircleImageView
+                           android:id="@+id/cvAdv"
+                           android:layout_width="60dp"
+                           android:layout_height="60dp"
+                           android:padding="5dp"
+                           android:background="@drawable/circle_white"
+                           android:src="@drawable/payment_green">
+                       </de.hdodenhof.circleimageview.CircleImageView>
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/tvAdv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:textSize="18dp"
+                    android:text="Advance Payments"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlack"></TextView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cdPend"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:elevation="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/shape_red">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/cvPend"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="5dp"
+                            android:background="@drawable/circle_white"
+                            android:src="@drawable/payment_red">
+                        </de.hdodenhof.circleimageview.CircleImageView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvPend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:textSize="18dp"
+                    android:text="Pending Payments"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlack"></TextView>
+
+               <androidx.cardview.widget.CardView
+                    android:id="@+id/cdPaid"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                   android:elevation="20dp">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:gravity="center"
+                       android:background="@drawable/shape_green">
+
+                       <de.hdodenhof.circleimageview.CircleImageView
+                           android:id="@+id/cvPaid"
+                           android:layout_width="60dp"
+                           android:layout_height="60dp"
+                           android:padding="5dp"
+                           android:background="@drawable/circle_white"
+                           android:src="@drawable/payment_green">
+                       </de.hdodenhof.circleimageview.CircleImageView>
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+
+
+
+                <TextView
+                    android:id="@+id/tvPaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:textSize="18dp"
+                    android:text="Paid Payments"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlack"></TextView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
+
+
+
+
+
+

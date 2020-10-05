@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tetravalstartups.kgs">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".staff.VideoPhotoActivity"/>
+        <activity android:name=".staff.UploadPhotoActivity" />
+        <activity android:name=".staff.Staff_EditprofileActivity" />
+        <activity android:name=".staff.AssignfactoryActivity" />
+        <activity android:name=".staff.StaffprofileActivity" />
+        <activity android:name=".staff.Staffassign_paymentsActivity" />
+        <activity android:name=".staff.StaffNotificationActivity" />
+        <activity android:name=".client.NotificationActivity" />
+        <activity android:name=".staff.DashstaffActivity" />
+        <activity android:name=".auth.view.PhoneActivity" />
+        <activity
+            android:name=".client.DashclientActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".auth.view.LoginActivity" />
+        <activity android:name=".auth.view.OtpActivity" />
+        <activity android:name=".common.MainActivity" />
+        <activity android:name=".common.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

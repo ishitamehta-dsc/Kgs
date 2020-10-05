@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBlack"
+    tools:context=".client.fragment.MediaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_margin="30dp">
+
+            <ImageView
+                android:id="@+id/ivBackmedia"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/back">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tvMedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/futura_medium_bt"
+                android:text="Media"
+                android:textColor="@color/colorWhite">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/ivNotimedc"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="110dp"
+                android:src="@drawable/notification">
+            </ImageView>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tvFactName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Factory Name"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="17sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvFactDate1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:layout_gravity="center"
+                        android:text="Date: 17/05/20"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="11sp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="7dp">
+
+                <ImageView
+                    android:id="@+id/ivFactory1"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/factory_img"></ImageView>
+
+                <ImageView
+                    android:id="@+id/ivFactory2"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/factory_img"></ImageView>
+
+                <ImageView
+                    android:id="@+id/ivFactory3"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/factory_img"></ImageView>
+
+                <ImageView
+                    android:id="@+id/ivFactory4"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/factory_img"></ImageView>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivFactory5"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/factory_img"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ivFactory6"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/factory_img"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ivFactory7"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/factory_img"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ivFactory8"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/factory_img"></ImageView>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/Meddiv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tvFactName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Factory Name"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="17sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvFactDate2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="Date: 09/07/20"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="11sp"></TextView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="7dp">
+
+                    <ImageView
+                        android:id="@+id/ivFactory9"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/factory_img"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ivFactory10"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/factory_img"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ivFactory11"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/factory_img"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ivFactory12"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/factory_img"></ImageView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivFactory13"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/factory_img"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ivFactory14"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/factory_img"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ivFactory15"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/factory_img"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ivFactory16"
+                        android:layout_width="60dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/factory_img"></ImageView>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/Meddiv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>
+

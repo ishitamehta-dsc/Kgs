@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBlack">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30dp">
+
+        <ImageView
+            android:id="@+id/ivNback"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/tvClientnoti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification"
+            android:ems="10"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:fontFamily="@font/futura_medium_bt"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:gravity="center">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvClientNoti_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

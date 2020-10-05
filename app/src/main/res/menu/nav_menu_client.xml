@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item android:id="@+id/profile"
+        android:title="My Profile"
+        android:orderInCategory="100"
+        android:icon="@drawable/user"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/dashboard"
+        android:title="Dashboard"
+        android:orderInCategory="100"
+        android:icon="@drawable/dashboard_new"
+        app:showAsAction="never"/>
+
+
+    <item android:id="@+id/factories"
+        android:title="Factories"
+        android:orderInCategory="100"
+        android:icon="@drawable/factory_new"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/media"
+        android:title="Media"
+        android:orderInCategory="100"
+        android:icon="@drawable/media"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/payments"
+        android:title="Payments"
+        android:orderInCategory="100"
+        android:icon="@drawable/payment_new"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/invoice"
+        android:title="Invoices"
+        android:orderInCategory="100"
+        android:icon="@drawable/invoice"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/subscriptions"
+        android:title="Subscriptions"
+        android:icon="@drawable/subscription"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+
+    <item android:id="@+id/help"
+        android:title="Help"
+        android:orderInCategory="100"
+        android:icon="@drawable/help"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/policy"
+        android:title="Policies"
+        android:icon="@drawable/policy"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/logout"
+        android:title="Logout"
+        android:orderInCategory="100"
+        android:icon="@drawable/logout"
+        app:showAsAction="never"/>
+
+</menu>
