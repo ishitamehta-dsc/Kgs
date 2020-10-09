@@ -39,7 +39,6 @@
         </TextView>
     </LinearLayout>
 
-
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -49,81 +48,109 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_margin="30dp">
 
-                <TextView
-                    android:id="@+id/tvYourp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="30dp"
-                    android:fontFamily="@font/futura_medium_bt"
-                    android:text="Your Profile"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="18sp"
-                    android:textStyle="bold"></TextView>
+<!--                <TextView-->
+<!--                    android:id="@+id/tvYourp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="30dp"-->
+<!--                    android:fontFamily="@font/futura_medium_bt"-->
+<!--                    android:text="Your Profile"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"/>-->
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/user_img">
+                    </de.hdodenhof.circleimageview.CircleImageView>
 
                     <TextView
                         android:id="@+id/tvName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/futura_medium_bt"
                         android:text="Name:"
                         android:textSize="16sp"
-                        android:textColor="@color/colorBlack"></TextView>
+                        android:textColor="@color/colorBlack"/>
 
                     <TextView
                         android:id="@+id/tvNameValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
                         android:layout_marginTop="5dp"
                         android:hint="sample Name"
                         android:textSize="18sp"
                         android:inputType="text"
                         android:textColor="@color/colorBlack"
                         android:fontFamily="@font/futura_medium_bt"
-                        android:background="@drawable/bg_edittext_transparent"></TextView>
+                        android:background="@drawable/bg_edittext_transparent"/>
 
                     <View
                         android:id="@+id/divider1"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
                         android:layout_marginTop="5dp"
                         android:background="?android:attr/listDivider" />
 
                     <TextView
-                        android:id="@+id/tvMobile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/futura_medium_bt"
                         android:text="Mobile Number:"
                         android:textSize="16sp"
-                        android:textColor="@color/colorBlack"></TextView>
+                        android:textColor="@color/colorBlack"/>
 
                     <TextView
                         android:id="@+id/tvMobValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
                         android:layout_marginTop="5dp"
                         android:hint="sample number"
                         android:inputType="phone"
                         android:textSize="18sp"
                         android:textColor="@color/colorBlack"
                         android:fontFamily="@font/futura_medium_bt"
-                        android:background="@drawable/bg_edittext_transparent"></TextView>
+                        android:background="@drawable/bg_edittext_transparent"/>
 
                     <View
                         android:id="@+id/divider2"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="Alternate Mobile Number:"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:id="@+id/tvAlt_MobValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:hint="sample number"
+                        android:inputType="phone"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:background="@drawable/bg_edittext_transparent"/>
+
+                    <View
+                        android:id="@+id/divider8"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
                         android:layout_marginTop="5dp"
                         android:background="?android:attr/listDivider" />
 
@@ -131,32 +158,86 @@
                         android:id="@+id/tvEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/futura_medium_bt"
                         android:text="Email:"
                         android:textSize="16sp"
-                        android:textColor="@color/colorBlack"></TextView>
+                        android:textColor="@color/colorBlack"/>
 
                     <TextView
                         android:id="@+id/tvEmailValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
                         android:layout_marginTop="5dp"
                         android:hint="sample Email"
                         android:inputType="textEmailAddress"
                         android:textSize="18sp"
                         android:textColor="@color/colorBlack"
                         android:fontFamily="@font/futura_medium_bt"
-                        android:background="@drawable/bg_edittext_transparent"></TextView>
+                        android:background="@drawable/bg_edittext_transparent"/>
 
                     <View
                         android:id="@+id/divider3"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/tvAlternate_Email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="Alternate Email:"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:id="@+id/tvAlt_EmailValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:hint="sample Email"
+                        android:inputType="textEmailAddress"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:background="@drawable/bg_edittext_transparent"/>
+
+                    <View
+                        android:id="@+id/divider4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/tvCompany_Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:text="Company Name:"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:id="@+id/tvCompanyName_Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:hint="sample Company Name"
+                        android:inputType="textEmailAddress"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:background="@drawable/bg_edittext_transparent"/>
+
+                    <View
+                        android:id="@+id/divider5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
                         android:layout_marginTop="5dp"
                         android:background="?android:attr/listDivider" />
 
@@ -164,32 +245,73 @@
                         android:id="@+id/tvAdd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/futura_medium_bt"
                         android:text="Address:"
                         android:textSize="16sp"
-                        android:textColor="@color/colorBlack"></TextView>
+                        android:textColor="@color/colorBlack"/>
 
                     <TextView
                         android:id="@+id/tvAddressValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
                         android:layout_marginTop="5dp"
                         android:hint="sample Address"
                         android:textSize="18sp"
                         android:inputType="text"
                         android:textColor="@color/colorBlack"
                         android:fontFamily="@font/futura_medium_bt"
-                        android:background="@drawable/bg_edittext_transparent"></TextView>
+                        android:background="@drawable/bg_edittext_transparent"/>
 
                     <View
-                        android:id="@+id/divider4"
+                        android:id="@+id/divider6"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvGstNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/futura_medium_bt"
+                            android:text="GST Number:"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorBlack"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/futura_medium_bt"
+                            android:text="(Optional)"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvGstNum_Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:hint="sample GST Number"
+                        android:textSize="18sp"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/futura_medium_bt"
+                        android:background="@drawable/bg_edittext_transparent"/>
+
+                    <View
+                        android:id="@+id/divider7"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
                         android:layout_marginTop="5dp"
                         android:background="?android:attr/listDivider" />
 
@@ -205,7 +327,7 @@
                         android:text="Edit Profile"
                         android:textColor="@color/colorWhite"
                         android:fontFamily="@font/futura_medium_bt"
-                        android:textAllCaps="false"></TextView>
+                        android:textAllCaps="false"/>
 
                 </LinearLayout>
             </ScrollView>

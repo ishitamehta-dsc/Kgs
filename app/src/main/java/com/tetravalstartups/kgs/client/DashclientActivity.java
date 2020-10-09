@@ -16,6 +16,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -45,6 +46,7 @@ import com.tetravalstartups.kgs.client.fragment.InvoiceFragment;
 import com.tetravalstartups.kgs.client.fragment.MediaFragment;
 import com.tetravalstartups.kgs.client.fragment.PaymentsFragment;
 import com.tetravalstartups.kgs.client.fragment.ProfileFragment;
+import com.tetravalstartups.kgs.client.fragment.SubscriptionFragment;
 import com.tetravalstartups.kgs.common.MainActivity;
 import com.tetravalstartups.kgs.common.SplashActivity;
 
@@ -133,6 +135,13 @@ public class DashclientActivity extends AppCompatActivity {
                         drawerlayout.closeDrawer(GravityCompat.START);
                         break;
 
+                    case R.id.subscriptions:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
+                                new SubscriptionFragment()).commit();
+                        tvToolbarTitle.setText("Subscriptions");
+                        drawerlayout.closeDrawer(GravityCompat.START);
+                        break;
+
                     case R.id.media:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
                                 new MediaFragment()).commit();
@@ -144,6 +153,13 @@ public class DashclientActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
                                 new HelpFragment()).commit();
                         tvToolbarTitle.setText("Help");
+                        drawerlayout.closeDrawer(GravityCompat.START);
+                        break;
+
+                    case R.id.policy:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
+                                new InvoiceFragment()).commit();
+                        tvToolbarTitle.setText("Policies");
                         drawerlayout.closeDrawer(GravityCompat.START);
                         break;
 
@@ -180,6 +196,27 @@ public class DashclientActivity extends AppCompatActivity {
 
     }
 
+//    boolean doubleBackToExitPressedOnce = false;
+//
+//    @Override
+//    public void onBackPressed() {
+//        if (doubleBackToExitPressedOnce) {
+//            super.onBackPressed();
+//            return;
+//        }
+//
+//        this.doubleBackToExitPressedOnce = true;
+//        //Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+//
+//
+//        new Handler().postDelayed(new Runnable() {
+//
+//            @Override
+//            public void run() {
+//                doubleBackToExitPressedOnce=false;
+//            }
+//        }, 2000);
+//    }
 
 
 

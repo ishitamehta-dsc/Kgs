@@ -23,7 +23,7 @@ public class StaffNotificationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(StaffNotificationActivity.this, DashstaffActivity.class));
-                finish();
+
             }
         });
     }

@@ -70,12 +70,13 @@
                 android:textSize="16sp"
                 android:textColor="@color/colorBlack"/>
 
-            <EditText
-                android:id="@+id/etStaff_profilename"
+            <TextView
+                android:id="@+id/tvStaff_profilename"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
+                android:textSize="18sp"
                 android:hint="sample Name"
                 android:inputType="text"
                 android:textColor="@color/colorBlack"
@@ -92,7 +93,7 @@
                 android:background="?android:attr/listDivider"/>
 
             <TextView
-                android:id="@+id/tvStaffmobile"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -102,12 +103,13 @@
                 android:textSize="16sp"
                 android:textColor="@color/colorBlack"/>
 
-            <EditText
-                android:id="@+id/etStaff_profilenumber"
+            <TextView
+                android:id="@+id/tvStaff_profilenumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
+                android:textSize="18sp"
                 android:hint="sample number"
                 android:inputType="phone"
                 android:textColor="@color/colorBlack"
@@ -134,12 +136,13 @@
                 android:textSize="16sp"
                 android:textColor="@color/colorBlack"/>
 
-            <EditText
-                android:id="@+id/etStaff_profileemail"
+            <TextView
+                android:id="@+id/tvStaff_profileemail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
+                android:textSize="18sp"
                 android:hint="sample Email"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/colorBlack"
@@ -166,12 +169,13 @@
                 android:textSize="16sp"
                 android:textColor="@color/colorBlack"/>
 
-            <EditText
-                android:id="@+id/etStaffprofadd"
+            <TextView
+                android:id="@+id/tvStaffprofadd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
+                android:textSize="18sp"
                 android:hint="sample Address"
                 android:inputType="text"
                 android:textColor="@color/colorBlack"

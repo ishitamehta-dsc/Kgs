@@ -190,7 +190,9 @@ public class OtpActivity extends AppCompatActivity {
 
     private void checkUser() {
         AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
-        Call<CheckUser> call = authInterface.checkUser("8269114451");
+
+        // <--- TODO ----- change client id tp "client_id" after testing --->
+        Call<CheckUser> call = authInterface.checkUser("1212457896");
         call.enqueue(new Callback<CheckUser>() {
             @Override
             public void onResponse(Call<CheckUser> call, Response<CheckUser> response) {
@@ -203,9 +205,11 @@ public class OtpActivity extends AppCompatActivity {
                         editor.putInt("id", checkUser.getData().getId());
                         editor.apply();
                         startActivity(new Intent(OtpActivity.this, DashclientActivity.class));
+                        finish();
 
                     } else if (response.body().getType() == 2) {
                         startActivity(new Intent(OtpActivity.this, DashstaffActivity.class));
+                        finish();
 
 
                     }

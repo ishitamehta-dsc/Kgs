@@ -53,34 +53,34 @@ public class DashboardFragment extends Fragment {
     private void initView() {
         preferences = getContext().getSharedPreferences("login", 0);
         id = preferences.getInt("id",0);
+        //Toast.makeText(getContext(), ""+id, Toast.LENGTH_SHORT).show();
 
         notificationRecyclerView = view.findViewById(R.id.notificationRecyclerView);
         notificationRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         notificationRecyclerView.setHasFixedSize(true);
 
         AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
-        Call<ClientDashboard> call = authInterface.clientDashboard(12);
+        //<--- TODO: ----- change client id tp "client_id" after testing --->
+        Call<ClientDashboard> call = authInterface.clientDashboard(1);
         call.enqueue(new Callback<ClientDashboard>() {
-
             @Override
             public void onResponse(Call<ClientDashboard> call, Response<ClientDashboard> response) {
-                Log.e(TAG, "onResponse: "+response.body().getData().getNotification());
+                Log.e(TAG, "onResponse:"+response.code()+" "+response.message());
                 if (response.code() == 200) {
-
                     notificationDashboardAdapter = new NotificationDashboardAdapter(getContext(), response.body().getData().getNotification());
                     notificationDashboardAdapter.notifyDataSetChanged();
                     notificationRecyclerView.setAdapter(notificationDashboardAdapter);
-
-                } else if (response.code() == 400){
-                    Toast.makeText(getContext(), "No data found", Toast.LENGTH_SHORT).show();
+                } else if (response.code() == 400) {
+                    Toast.makeText(getContext(), "No Notifications", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ClientDashboard> call, Throwable t) {
-
+                Log.e(TAG, "onFailure: "+t.getMessage());
             }
         });
+
 
     }
 }

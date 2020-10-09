@@ -61,7 +61,7 @@
                     android:fontFamily="@font/futura_medium_bt"
                     android:textSize="17sp"
                     android:textStyle="bold"
-                    android:textColor="@color/colorBlack"></TextView>
+                    android:textColor="@color/colorBlack"/>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvStaffCollect"
@@ -97,7 +97,7 @@
                             android:fontFamily="@font/futura_medium_bt"
                             android:textSize="20sp"
                             android:text="Collected Payments"
-                            android:textColor="@color/colorWhite"></TextView>
+                            android:textColor="@color/colorWhite"/>
 
 
                         <LinearLayout
@@ -113,7 +113,7 @@
                                 android:fontFamily="@font/futura_medium_bt"
                                 android:textSize="20sp"
                                 android:text="₹"
-                                android:textColor="@color/colorWhite"></TextView>
+                                android:textColor="@color/colorWhite"/>
 
                             <TextView
                                 android:id="@+id/tvStaffmoney"

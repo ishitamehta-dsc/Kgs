@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.tetravalstartups.kgs.R;
-import com.tetravalstartups.kgs.auth.model.ClientDashboard;
+import com.tetravalstartups.kgs.client.model.Notification;
 
 import java.util.List;
 
@@ -17,9 +17,9 @@ import androidx.recyclerview.widget.RecyclerView;
 public class NotificationDashboardAdapter extends RecyclerView.Adapter<NotificationDashboardAdapter.NotificationViewHolder> {
 
     private Context context;
-    private List<ClientDashboard.Notification> clientDashboardList;
+    private List<Notification> clientDashboardList;
 
-    public NotificationDashboardAdapter(Context context, List<ClientDashboard.Notification> clientDashboardList) {
+    public NotificationDashboardAdapter(Context context, List<Notification> clientDashboardList) {
         this.context = context;
         this.clientDashboardList = clientDashboardList;
     }

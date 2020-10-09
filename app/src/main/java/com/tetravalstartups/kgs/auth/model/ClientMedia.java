@@ -2,31 +2,31 @@ package com.tetravalstartups.kgs.auth.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.tetravalstartups.kgs.client.model.ClientDashResponse;
 
 import java.util.List;
 
-public class ClientDashboard {
+public class ClientMedia {
 
     @SerializedName("status")
     @Expose
     private Boolean status;
     @SerializedName("data")
     @Expose
-
-    private ClientDashResponse data;
+    private List<ClientMediaResponse> data = null;
 
     /**
      * No args constructor for use in serialization
+     *
      */
-    public ClientDashboard() {
+    public ClientMedia() {
     }
 
     /**
+     *
      * @param data
      * @param status
      */
-    public ClientDashboard(Boolean status, ClientDashResponse data) {
+    public ClientMedia(Boolean status, List<ClientMediaResponse> data) {
         super();
         this.status = status;
         this.data = data;
@@ -40,13 +40,12 @@ public class ClientDashboard {
         this.status = status;
     }
 
-    public ClientDashResponse getData() {
+    public List<ClientMediaResponse> getData() {
         return data;
     }
 
-    public void setData(ClientDashResponse data) {
+    public void setData(List<ClientMediaResponse> data) {
         this.data = data;
     }
-
 
 }
