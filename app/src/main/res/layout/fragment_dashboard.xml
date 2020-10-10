@@ -63,8 +63,7 @@
                         android:fontFamily="@font/futura_medium_bt"
                         android:textSize="20sp"
                         android:text="₹"
-                        android:textColor="@color/colorWhite"
-                        ></TextView>
+                        android:textColor="@color/colorWhite"/>
 
                     <TextView
                         android:id="@+id/tvDashpendMoney"
@@ -93,14 +92,22 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/notificationRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"/>
+
         </ScrollView>
+        <TextView
+            android:id="@+id/tvEmpty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="No new Notifications" />
 
     </LinearLayout>
 

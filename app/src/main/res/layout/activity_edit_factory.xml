@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBlack"
+    tools:context=".client.EditFactoryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30dp">
+
+        <ImageView
+            android:id="@+id/ivEditFactoryback"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/tvUpdateFactory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Factory"
+            android:ems="10"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:fontFamily="@font/futura_medium_bt"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/futura_medium_bt"
+            android:text="Factory Name:"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"/>
+
+        <EditText
+            android:id="@+id/tvFactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Enter Factory Name"
+            android:textSize="18sp"
+            android:inputType="text"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/futura_medium_bt"
+            android:background="@drawable/bg_edittext_transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/futura_medium_bt"
+            android:text="Address:"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"/>
+
+        <EditText
+            android:id="@+id/tvFactAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Enter Address"
+            android:inputType="text"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/futura_medium_bt"
+            android:background="@drawable/bg_edittext_transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/futura_medium_bt"
+            android:text="City:"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"/>
+
+        <EditText
+            android:id="@+id/tvFactCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Enter City"
+            android:inputType="text"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/futura_medium_bt"
+            android:background="@drawable/bg_edittext_transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/futura_medium_bt"
+        android:text="State:"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"/>
+
+        <EditText
+            android:id="@+id/tvFactState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Enter State"
+            android:inputType="text"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/futura_medium_bt"
+            android:background="@drawable/bg_edittext_transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/futura_medium_bt"
+            android:text="Pin code:"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"/>
+
+        <EditText
+            android:id="@+id/tvFactPincode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Enter Pin code"
+            android:maxLength="6"
+            android:inputType="phone"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/futura_medium_bt"
+            android:background="@drawable/bg_edittext_transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/futura_medium_bt"
+            android:text="Country:"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"/>
+
+        <EditText
+            android:id="@+id/tvFactCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Enter Country"
+            android:inputType="text"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/futura_medium_bt"
+            android:background="@drawable/bg_edittext_transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/btnUpdateFact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@drawable/button"
+            android:layout_margin="40dp"
+            android:gravity="center"
+            android:text="Update Factory"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/futura_medium_bt"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

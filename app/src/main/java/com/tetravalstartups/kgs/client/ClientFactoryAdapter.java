@@ -1,6 +1,8 @@
 package com.tetravalstartups.kgs.client;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,9 +33,35 @@ public class ClientFactoryAdapter extends RecyclerView.Adapter<ClientFactoryAdap
         return new ClientFactoryViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull ClientFactoryAdapter.ClientFactoryViewHolder holder, int position) {
-        holder.tvFname1.setText(clientFactoryList.get(position).getLocationName());
+    public void onBindViewHolder(@NonNull ClientFactoryAdapter.ClientFactoryViewHolder holder, final int position) {
+        holder.tvFactoryName.setText(clientFactoryList.get(position).getLocationName());
+        holder.tvFactoryAddress.setText(""+clientFactoryList.get(position).getAddress());
+        holder.tvFactoryCity.setText(""+clientFactoryList.get(position).getCity());
+        holder.tvFactoryState.setText(""+clientFactoryList.get(position).getState());
+        holder.tvFactoryPin.setText(""+clientFactoryList.get(position).getPincode());
+        holder.tvFactoryCountry.setText(""+clientFactoryList.get(position).getCountry());
+        holder.tvCreatedDate.setText(""+clientFactoryList.get(position).getCreatedDate());
+
+        holder.tvEdit1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), EditFactoryActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
+
+
+        holder.tvDelete1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ClientFactoryList.Datum theRemovedItem = clientFactoryList.get(position);
+                clientFactoryList.remove(position);
+                notifyItemRemoved(position);
+            }
+        });
     }
 
     @Override
@@ -42,12 +70,24 @@ public class ClientFactoryAdapter extends RecyclerView.Adapter<ClientFactoryAdap
     }
 
     public class ClientFactoryViewHolder extends RecyclerView.ViewHolder {
-        private TextView tvFname1;
+        private TextView tvFactoryName;
+        private TextView tvFactoryAddress;
+        private TextView tvFactoryCity;
+        private TextView tvFactoryState;
+        private TextView tvFactoryPin;
+        private TextView tvFactoryCountry;
+        private TextView tvCreatedDate;
         private TextView tvEdit1;
         private TextView tvDelete1;
         public ClientFactoryViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvFname1 = itemView.findViewById(R.id.tvFname1);
+            tvFactoryName= itemView.findViewById(R.id.tvFactoryName);
+            tvFactoryAddress = itemView.findViewById(R.id.tvFactoryAddress);
+            tvFactoryCity = itemView.findViewById(R.id.tvFactoryCity);
+            tvFactoryState = itemView.findViewById(R.id.tvFactoryState);
+            tvFactoryPin = itemView.findViewById(R.id.tvFactoryPin);
+            tvFactoryCountry = itemView.findViewById(R.id.tvFactoryCountry);
+            tvCreatedDate = itemView.findViewById(R.id.tvCreatedDate);
             tvEdit1 = itemView.findViewById(R.id.tvEdit1);
             tvDelete1 = itemView.findViewById(R.id.tvDelete1);
         }

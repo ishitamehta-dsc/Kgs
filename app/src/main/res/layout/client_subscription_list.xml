@@ -155,7 +155,7 @@
                     android:textSize="15sp"
                     android:fontFamily="@font/futura_medium_bt"
                     android:layout_weight="1"
-                    android:text="15-06-2020"
+                    android:text="15/06/2020"
                     android:inputType="date"/>
 
                 <TextView
@@ -175,7 +175,7 @@
                     android:fontFamily="@font/futura_medium_bt"
                     android:layout_weight="1"
                     android:textSize="15sp"
-                    android:text="09-06-2020"
+                    android:text="09/06/2020"
                     android:inputType="date"/>
             </LinearLayout>
 

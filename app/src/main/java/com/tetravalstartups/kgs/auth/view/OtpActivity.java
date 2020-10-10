@@ -204,11 +204,15 @@ public class OtpActivity extends AppCompatActivity {
                         SharedPreferences.Editor editor = preferences.edit();
                         editor.putInt("id", checkUser.getData().getId());
                         editor.apply();
-                        startActivity(new Intent(OtpActivity.this, DashclientActivity.class));
+                        Intent intent = new Intent(OtpActivity.this, DashclientActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(new Intent(intent));
                         finish();
 
                     } else if (response.body().getType() == 2) {
-                        startActivity(new Intent(OtpActivity.this, DashstaffActivity.class));
+                        Intent intent = new Intent(OtpActivity.this, DashstaffActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(new Intent(intent));
                         finish();
 
 

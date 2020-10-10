@@ -6,9 +6,13 @@ import com.tetravalstartups.kgs.auth.model.ClientFactoryList;
 import com.tetravalstartups.kgs.auth.model.ClientInvoiceList;
 import com.tetravalstartups.kgs.auth.model.ClientMedia;
 import com.tetravalstartups.kgs.auth.model.ClientNotification;
+import com.tetravalstartups.kgs.auth.model.ClientPayment;
 import com.tetravalstartups.kgs.auth.model.ClientProfileDetail;
 import com.tetravalstartups.kgs.auth.model.ClientSubscriptionList;
+import com.tetravalstartups.kgs.auth.model.EditClientProfile;
 import com.tetravalstartups.kgs.auth.model.StaffProfileDetail;
+import com.tetravalstartups.kgs.auth.model.UpdateClientFactory;
+import com.tetravalstartups.kgs.client.EditFactoryActivity;
 
 import java.util.List;
 
@@ -55,5 +59,18 @@ public interface AuthInterface {
     @FormUrlEncoded
     @POST("auth/subscriptionList")
     Call<ClientSubscriptionList> clientSubscription(@Field("client_id") int client_id);
+
+    @FormUrlEncoded
+    @POST("auth/ClientPayment")
+    Call<ClientPayment> clientPayment(@Field("client_id") int client_id);
+
+
+    @FormUrlEncoded
+    @POST("auth/FactoryUpdateProfile")
+    Call<UpdateClientFactory> clientUpdateFactory(@Field("client_id") int client_id, @Field("factory_id") int factory_id);
+
+    @FormUrlEncoded
+    @POST("auth/updateProfile")
+    Call<EditClientProfile> clientEditProfile(@Field("client_id") int client_id);
 
 }

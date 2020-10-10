@@ -1,5 +1,6 @@
 package com.tetravalstartups.kgs.client.fragment;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +14,8 @@ import com.tetravalstartups.kgs.ApiClient;
 import com.tetravalstartups.kgs.R;
 import com.tetravalstartups.kgs.auth.model.ClientProfileDetail;
 import com.tetravalstartups.kgs.auth.view.AuthInterface;
+import com.tetravalstartups.kgs.client.ClientEditProfileActivity;
+import com.tetravalstartups.kgs.client.EditFactoryActivity;
 
 import java.util.List;
 
@@ -34,6 +37,7 @@ public class ProfileFragment extends Fragment {
     private TextView tvAddressValue;
     private TextView tvCompanyName_Value;
     private TextView tvGstNum_Value;
+    private TextView tvEdit;
     private SharedPreferences preferences;
     private View view;
     private int client_id;
@@ -62,6 +66,15 @@ public class ProfileFragment extends Fragment {
         tvAddressValue = view.findViewById(R.id.tvAddressValue);
         tvCompanyName_Value = view.findViewById(R.id.tvCompanyName_Value);
         tvGstNum_Value = view.findViewById(R.id.tvGstNum_Value);
+        tvEdit = view.findViewById(R.id.tvEdit);
+
+        tvEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), ClientEditProfileActivity.class);
+                startActivity(intent);
+            }
+        });
 
         preferences = getContext().getSharedPreferences("login", 0);
         client_id = preferences.getInt("id", 0);

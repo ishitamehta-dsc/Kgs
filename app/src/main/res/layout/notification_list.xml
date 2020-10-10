@@ -64,12 +64,12 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/ivClientdel"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="2dp"
-            app:srcCompat="@drawable/close" />
+<!--        <ImageView-->
+<!--            android:id="@+id/ivClientdel"-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            app:srcCompat="@drawable/close" />-->
 
     </LinearLayout>
 

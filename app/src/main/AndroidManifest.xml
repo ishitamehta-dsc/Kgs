@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".client.ClientMediaActivity"></activity>
+        <activity android:name=".client.ClientEditProfileActivity"></activity>
+        <activity android:name=".client.EditFactoryActivity" />
+        <activity android:name=".client.ClientMediaActivity" />
         <activity android:name=".staff.VideoPhotoActivity" />
         <activity android:name=".staff.UploadPhotoActivity" />
         <activity android:name=".staff.Staff_EditprofileActivity" />

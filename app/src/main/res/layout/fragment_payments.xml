@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorBlack"
     tools:context=".client.fragment.PaymentsFragment">
 
@@ -20,119 +21,131 @@
             android:padding="30dp">
 
 
-               <androidx.cardview.widget.CardView
-                    android:id="@+id/cdAdv"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
-                    android:elevation="20dp">
-
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:gravity="center"
-                       android:background="@drawable/shape_green">
-
-                       <de.hdodenhof.circleimageview.CircleImageView
-                           android:id="@+id/cvAdv"
-                           android:layout_width="60dp"
-                           android:layout_height="60dp"
-                           android:padding="5dp"
-                           android:background="@drawable/circle_white"
-                           android:src="@drawable/payment_green">
-                       </de.hdodenhof.circleimageview.CircleImageView>
-                   </LinearLayout>
-               </androidx.cardview.widget.CardView>
-
-
-                <TextView
-                    android:id="@+id/tvAdv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/futura_medium_bt"
-                    android:textSize="18dp"
-                    android:text="Advance Payments"
-                    android:layout_gravity="center"
-                    android:textColor="@color/colorBlack"></TextView>
-
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cdPend"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
-                    android:elevation="20dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginTop="30dp"
+                    app:cardCornerRadius="25dp"
+                    android:elevation="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp"
                         android:background="@drawable/shape_red">
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/cvPend"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:padding="5dp"
-                            android:background="@drawable/circle_white"
-                            android:src="@drawable/payment_red">
+                            android:src="@drawable/payment_red"
+                            android:background="@drawable/circle_white">
                         </de.hdodenhof.circleimageview.CircleImageView>
+
+                        <TextView
+                            android:id="@+id/tvPend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/futura_medium_bt"
+                            android:textSize="20sp"
+                            android:text="Pending Payments"
+                            android:textColor="@color/colorWhite"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/futura_medium_bt"
+                                android:textSize="20sp"
+                                android:text="₹"
+                                android:textColor="@color/colorWhite"/>
+
+                            <TextView
+                                android:id="@+id/tvPending_Money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textSize="20sp"
+                                android:fontFamily="@font/futura_medium_bt"
+                                android:inputType="number"
+                                android:text="2000"
+                                android:textColor="@color/colorWhite"/>
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/tvPend"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/futura_medium_bt"
-                    android:textSize="18dp"
-                    android:text="Pending Payments"
-                    android:layout_gravity="center"
-                    android:textColor="@color/colorBlack"></TextView>
+
 
                <androidx.cardview.widget.CardView
                     android:id="@+id/cdPaid"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
-                   android:elevation="20dp">
+                   android:layout_width="match_parent"
+                   android:layout_height="170dp"
+                   android:layout_marginTop="30dp"
+                   app:cardCornerRadius="25dp"
+                   android:elevation="10dp">
 
                    <LinearLayout
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
-                       android:gravity="center"
+                       android:orientation="vertical"
+                       android:padding="15dp"
                        android:background="@drawable/shape_green">
 
                        <de.hdodenhof.circleimageview.CircleImageView
                            android:id="@+id/cvPaid"
-                           android:layout_width="60dp"
-                           android:layout_height="60dp"
+                           android:layout_width="70dp"
+                           android:layout_height="70dp"
                            android:padding="5dp"
-                           android:background="@drawable/circle_white"
-                           android:src="@drawable/payment_green">
+                           android:src="@drawable/payment_green"
+                           android:background="@drawable/circle_white">
                        </de.hdodenhof.circleimageview.CircleImageView>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="5dp"
+                           android:fontFamily="@font/futura_medium_bt"
+                           android:textSize="20sp"
+                           android:text="Paid Payments"
+                           android:textColor="@color/colorWhite"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           android:layout_marginTop="5dp">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:fontFamily="@font/futura_medium_bt"
+                               android:textSize="20sp"
+                               android:text="₹"
+                               android:textColor="@color/colorWhite"/>
+
+                           <TextView
+                               android:id="@+id/tvPaid_Money"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:padding="5dp"
+                               android:textSize="20sp"
+                               android:fontFamily="@font/futura_medium_bt"
+                               android:inputType="number"
+                               android:text="2000"
+                               android:textColor="@color/colorWhite"/>
+                       </LinearLayout>
                    </LinearLayout>
                </androidx.cardview.widget.CardView>
-
-
-
-
-                <TextView
-                    android:id="@+id/tvPaid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/futura_medium_bt"
-                    android:textSize="18dp"
-                    android:text="Paid Payments"
-                    android:layout_gravity="center"
-                    android:textColor="@color/colorBlack"></TextView>
-
 
         </LinearLayout>
 

@@ -1,5 +1,6 @@
 package com.tetravalstartups.kgs.client;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -8,6 +9,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -37,6 +39,7 @@ import com.tetravalstartups.kgs.ApiClient;
 import com.tetravalstartups.kgs.R;
 import com.tetravalstartups.kgs.auth.model.CheckUser;
 import com.tetravalstartups.kgs.auth.model.ClientDashboard;
+import com.tetravalstartups.kgs.auth.model.ClientProfileDetail;
 import com.tetravalstartups.kgs.auth.view.AuthInterface;
 import com.tetravalstartups.kgs.auth.view.LoginActivity;
 import com.tetravalstartups.kgs.client.fragment.DashboardFragment;
@@ -55,17 +58,23 @@ public class DashclientActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private FirebaseUser firebaseUser;
     private ImageView ivmenunav, ivnotif;
+    private CircleImageView cvUserPic;
+    private TextView tvUserName;
+    private TextView tvUserNo;
     private TextView tvToolbarTitle;
     private FrameLayout frameContent;
     private DrawerLayout drawerlayout;
     private NavigationView nav_view;
     private LinearLayout lhActionBarContent;
+    private SharedPreferences preferences;
+    private Integer client_id;
     private static final String TAG = "DashclientActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashclient);
+
         init();
     }
 
@@ -77,6 +86,11 @@ public class DashclientActivity extends AppCompatActivity {
         lhActionBarContent = findViewById(R.id.lhActionBarContent);
         drawerlayout = findViewById(R.id.drawerlayout);
         nav_view = findViewById(R.id.nav_view);
+
+        cvUserPic = findViewById(R.id.cvUserPic);
+        tvUserName = findViewById(R.id.tvUserName);
+        tvUserName = findViewById(R.id.tvUserName);
+
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
@@ -97,67 +111,68 @@ public class DashclientActivity extends AppCompatActivity {
             }
         });
         nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.profile:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
-                                new ProfileFragment()).commit();
+                                new ProfileFragment()).addToBackStack(null).commit();
                         tvToolbarTitle.setText("Profile");
                         drawerlayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.dashboard:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
                                 new DashboardFragment()).commit();
                         tvToolbarTitle.setText("Client Dashboard");
                         drawerlayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.factories:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
                                 new FactoriesFragment()).commit();
                         tvToolbarTitle.setText("Factories");
                         drawerlayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.payments:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
                                 new PaymentsFragment()).commit();
                         tvToolbarTitle.setText("Payments");
                         drawerlayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.invoice:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
                                 new InvoiceFragment()).commit();
                         tvToolbarTitle.setText("Invoice");
                         drawerlayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.subscriptions:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
                                 new SubscriptionFragment()).commit();
                         tvToolbarTitle.setText("Subscriptions");
                         drawerlayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.media:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
                                 new MediaFragment()).commit();
                         tvToolbarTitle.setText("Media");
                         drawerlayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.help:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
                                 new HelpFragment()).commit();
                         tvToolbarTitle.setText("Help");
                         drawerlayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.policy:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameContent,
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameContent,
                                 new InvoiceFragment()).commit();
                         tvToolbarTitle.setText("Policies");
                         drawerlayout.closeDrawer(GravityCompat.START);
@@ -187,12 +202,34 @@ public class DashclientActivity extends AppCompatActivity {
                         alert1.show();
                 }
                 return true;
-
             }
         });
+//        preferences = getSharedPreferences("login", 0);
+//        client_id = preferences.getInt("id", 0);
+//
+//        AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
+//        // TODO: ----- Change client id to "client_id" after testing
+//        Call<ClientProfileDetail> clientProfileDetailCall = authInterface.clientProfileDetail(2);
+//        clientProfileDetailCall.enqueue(new Callback<ClientProfileDetail>() {
+//            @Override
+//            public void onResponse(Call<ClientProfileDetail> call, Response<ClientProfileDetail> response) {
+//                Log.e(TAG, "onResponse: " + response.body() + response.message() + response.code());
+//                if (response.code() == 200){
+//                    tvUserName.setText(response.body().getData().getFname());
+//                    tvUserNo.setText(response.body().getData().getMobile1());
+//                    //cvUserPic.setImageResource(response.body().getData().getProfileImage());
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ClientProfileDetail> call, Throwable t) {
+//                Log.e(TAG, "onResponse: " + t.getMessage());
+//            }
+//        });
 
-        SharedPreferences preferences = getSharedPreferences("login", 0);
-        int id = preferences.getInt("id", 0);
+        //SharedPreferences preferences = getSharedPreferences("login", 0);
+       // int id = preferences.getInt("id", 0);
+
 
     }
 

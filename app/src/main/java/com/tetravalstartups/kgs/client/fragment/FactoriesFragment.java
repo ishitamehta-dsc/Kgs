@@ -1,11 +1,14 @@
 package com.tetravalstartups.kgs.client.fragment;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tetravalstartups.kgs.ApiClient;
@@ -13,6 +16,7 @@ import com.tetravalstartups.kgs.R;
 import com.tetravalstartups.kgs.auth.model.ClientFactoryList;
 import com.tetravalstartups.kgs.auth.view.AuthInterface;
 import com.tetravalstartups.kgs.client.ClientFactoryAdapter;
+import com.tetravalstartups.kgs.client.EditFactoryActivity;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -29,6 +33,8 @@ public class FactoriesFragment extends Fragment {
     private ClientFactoryAdapter clientFactoryAdapter;
     private RecyclerView rvClientFactory;
     private SharedPreferences preferences;
+    private TextView tvEdit1;
+    private TextView tvDelete1;
     private static final String TAG = "FactoriesFragment";
     private int client_id;
 
@@ -50,12 +56,16 @@ public class FactoriesFragment extends Fragment {
         preferences = getContext().getSharedPreferences("login", 0);
         client_id = preferences.getInt("id", 0);
 
+        tvEdit1 = view.findViewById(R.id.tvEdit1);
+        tvDelete1 = view.findViewById(R.id.tvDelete1);
+
         rvClientFactory = view.findViewById(R.id.rvClientFactory);
         rvClientFactory.setLayoutManager(new LinearLayoutManager(getContext()));
 
+
         AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
         // <--- TODO ----- change client id tp "client_id" after testing --->
-        Call<ClientFactoryList> clientFactoryListCall = authInterface.clientFactory(1);
+        Call<ClientFactoryList> clientFactoryListCall = authInterface.clientFactory(2);
 
         clientFactoryListCall.enqueue(new Callback<ClientFactoryList>() {
             @Override
