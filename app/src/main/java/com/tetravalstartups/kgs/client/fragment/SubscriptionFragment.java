@@ -55,7 +55,8 @@ public class SubscriptionFragment extends Fragment {
         rvSubscription.setLayoutManager(new LinearLayoutManager(getContext()));
         
         AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
-        Call<ClientSubscriptionList> clientSubscriptionListCall = authInterface.clientSubscription(2);
+        // TODO: Rename and change id after testing
+        Call<ClientSubscriptionList> clientSubscriptionListCall = authInterface.clientSubscription(client_id);
         Log.e(TAG, "initViews: iam here bro....");
         clientSubscriptionListCall.enqueue(new Callback<ClientSubscriptionList>() {
             @Override

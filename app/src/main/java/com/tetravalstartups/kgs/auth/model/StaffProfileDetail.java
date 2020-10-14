@@ -8,9 +8,6 @@ public class StaffProfileDetail {
     @SerializedName("status")
     @Expose
     private Boolean status;
-    @SerializedName("type")
-    @Expose
-    private Integer type;
     @SerializedName("data")
     @Expose
     private Data data;
@@ -25,13 +22,11 @@ public class StaffProfileDetail {
     /**
      *
      * @param data
-     * @param type
      * @param status
      */
-    public StaffProfileDetail(Boolean status, Integer type, Data data) {
+    public StaffProfileDetail(Boolean status, Data data) {
         super();
         this.status = status;
-        this.type = type;
         this.data = data;
     }
 
@@ -43,14 +38,6 @@ public class StaffProfileDetail {
         this.status = status;
     }
 
-    public Integer getType() {
-        return type;
-    }
-
-    public void setType(Integer type) {
-        this.type = type;
-    }
-
     public Data getData() {
         return data;
     }
@@ -58,6 +45,7 @@ public class StaffProfileDetail {
     public void setData(Data data) {
         this.data = data;
     }
+
 
     public class Data {
 
@@ -85,12 +73,6 @@ public class StaffProfileDetail {
         @SerializedName("dob")
         @Expose
         private String dob;
-        @SerializedName("profile_pic")
-        @Expose
-        private String profilePic;
-        @SerializedName("joining_date")
-        @Expose
-        private String joiningDate;
         @SerializedName("address")
         @Expose
         private String address;
@@ -102,19 +84,10 @@ public class StaffProfileDetail {
         private String state;
         @SerializedName("pincode")
         @Expose
-        private Integer pincode;
+        private String pincode;
         @SerializedName("country")
         @Expose
         private String country;
-        @SerializedName("created_date")
-        @Expose
-        private String createdDate;
-        @SerializedName("status")
-        @Expose
-        private Integer status;
-        @SerializedName("profile_image")
-        @Expose
-        private String profileImage;
 
         /**
          * No args constructor for use in serialization
@@ -131,20 +104,15 @@ public class StaffProfileDetail {
          * @param address
          * @param gender
          * @param city
-         * @param profilePic
          * @param mobile1
-         * @param joiningDate
-         * @param profileImage
          * @param lname
-         * @param createdDate
          * @param dob
          * @param mobile2
          * @param id
          * @param state
          * @param email
-         * @param status
          */
-        public Data(Integer id, String fname, String lname, String email, String mobile1, String mobile2, Integer gender, String dob, String profilePic, String joiningDate, String address, String city, String state, Integer pincode, String country, String createdDate, Integer status, String profileImage) {
+        public Data(Integer id, String fname, String lname, String email, String  mobile1, String mobile2, Integer gender, String dob, String address, String city, String state, String pincode, String country) {
             super();
             this.id = id;
             this.fname = fname;
@@ -154,16 +122,11 @@ public class StaffProfileDetail {
             this.mobile2 = mobile2;
             this.gender = gender;
             this.dob = dob;
-            this.profilePic = profilePic;
-            this.joiningDate = joiningDate;
             this.address = address;
             this.city = city;
             this.state = state;
             this.pincode = pincode;
             this.country = country;
-            this.createdDate = createdDate;
-            this.status = status;
-            this.profileImage = profileImage;
         }
 
         public Integer getId() {
@@ -230,22 +193,6 @@ public class StaffProfileDetail {
             this.dob = dob;
         }
 
-        public String getProfilePic() {
-            return profilePic;
-        }
-
-        public void setProfilePic(String profilePic) {
-            this.profilePic = profilePic;
-        }
-
-        public String getJoiningDate() {
-            return joiningDate;
-        }
-
-        public void setJoiningDate(String joiningDate) {
-            this.joiningDate = joiningDate;
-        }
-
         public String getAddress() {
             return address;
         }
@@ -270,11 +217,11 @@ public class StaffProfileDetail {
             this.state = state;
         }
 
-        public Integer getPincode() {
+        public String getPincode() {
             return pincode;
         }
 
-        public void setPincode(Integer pincode) {
+        public void setPincode(String pincode) {
             this.pincode = pincode;
         }
 
@@ -284,30 +231,6 @@ public class StaffProfileDetail {
 
         public void setCountry(String country) {
             this.country = country;
-        }
-
-        public String getCreatedDate() {
-            return createdDate;
-        }
-
-        public void setCreatedDate(String createdDate) {
-            this.createdDate = createdDate;
-        }
-
-        public Integer getStatus() {
-            return status;
-        }
-
-        public void setStatus(Integer status) {
-            this.status = status;
-        }
-
-        public String getProfileImage() {
-            return profileImage;
-        }
-
-        public void setProfileImage(String profileImage) {
-            this.profileImage = profileImage;
         }
 
     }

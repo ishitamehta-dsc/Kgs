@@ -61,7 +61,7 @@ public class PaymentsFragment extends Fragment {
 
         AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
         // TODO: ----- Change client id to "client_id" after testing
-        Call<ClientPayment> clientPaymentCall = authInterface.clientPayment(2);
+        Call<ClientPayment> clientPaymentCall = authInterface.clientPayment(client_id);
         clientPaymentCall.enqueue(new Callback<ClientPayment>() {
             @Override
             public void onResponse(Call<ClientPayment> call, Response<ClientPayment> response) {

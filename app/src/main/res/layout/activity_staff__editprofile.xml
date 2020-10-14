@@ -15,7 +15,7 @@
         android:layout_margin="30dp">
 
         <ImageView
-            android:id="@+id/ivStaff_Editback"
+            android:id="@+id/ivStaffEditBack"
             android:layout_width="25dp"
             android:layout_height="20dp"
             android:layout_gravity="bottom"
@@ -37,165 +37,336 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/rectangle"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="30dp"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvStaff_Edit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/futura_medium_bt"
-                android:text="Your Profile"
+                android:text="First Name:"
                 android:textColor="@color/colorBlack"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/tvStaff_Editname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:fontFamily="@font/futura_medium_bt"
-                android:text="Name:"
-                android:textSize="16sp"
-                android:textColor="@color/colorBlack"/>
+                android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/etStaff_Editname_val"
+                android:id="@+id/etStaffFName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/bg_edittext_transparent"
+                android:fontFamily="@font/futura_medium_bt"
                 android:hint="sample Name"
                 android:inputType="text"
                 android:textColor="@color/colorBlack"
-                android:fontFamily="@font/futura_medium_bt"
-                android:background="@drawable/bg_edittext_transparent"/>
+                android:textSize="18sp" />
 
             <View
-                android:id="@+id/horDivider1"
+                android:id="@+id/divider1"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
                 android:layout_marginTop="5dp"
-                android:background="?android:attr/listDivider"/>
+                android:background="?android:attr/listDivider" />
+
 
             <TextView
-                android:id="@+id/tvStaff_Editmob"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/futura_medium_bt"
+                android:text="Last Name:"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etStaffLName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_edittext_transparent"
+                android:fontFamily="@font/futura_medium_bt"
+                android:hint="sample Name"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/futura_medium_bt"
                 android:text="Mobile Number:"
-                android:textSize="16sp"
-                android:textColor="@color/colorBlack"/>
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/etStaff_Editmobno_val"
+                android:id="@+id/etStaffEditMob1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/bg_edittext_transparent"
+                android:fontFamily="@font/futura_medium_bt"
                 android:hint="sample number"
                 android:inputType="phone"
                 android:textColor="@color/colorBlack"
-                android:fontFamily="@font/futura_medium_bt"
-                android:background="@drawable/bg_edittext_transparent"/>
+                android:textSize="18sp" />
 
             <View
-                android:id="@+id/horDivider2"
+                android:id="@+id/divider2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
                 android:layout_marginTop="5dp"
-                android:background="?android:attr/listDivider"/>
+                android:background="?android:attr/listDivider" />
 
             <TextView
-                android:id="@+id/tvStaff_Editmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/futura_medium_bt"
+                android:text="Alternate Mobile Number:"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etStaffEditMob2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_edittext_transparent"
+                android:fontFamily="@font/futura_medium_bt"
+                android:hint="sample number"
+                android:inputType="phone"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/futura_medium_bt"
                 android:text="Email:"
-                android:textSize="16sp"
-                android:textColor="@color/colorBlack"/>
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/etStaff_Editemail_val"
+                android:id="@+id/etStaffEditEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/bg_edittext_transparent"
+                android:fontFamily="@font/futura_medium_bt"
                 android:hint="sample Email"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/colorBlack"
-                android:fontFamily="@font/futura_medium_bt"
-                android:background="@drawable/bg_edittext_transparent"/>
+                android:textSize="18sp" />
 
             <View
-                android:id="@+id/horDivider3"
+                android:id="@+id/divider3"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
                 android:layout_marginTop="5dp"
-                android:background="?android:attr/listDivider"/>
+                android:background="?android:attr/listDivider" />
+
 
             <TextView
-                android:id="@+id/tvStaff_Editadd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/futura_medium_bt"
+                android:text="Gender:"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etStaffEditGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_edittext_transparent"
+                android:fontFamily="@font/futura_medium_bt"
+                android:hint="Gender"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/futura_medium_bt"
+                android:text="Date of Birth:"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etStaffEditDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_edittext_transparent"
+                android:fontFamily="@font/futura_medium_bt"
+                android:hint="dd/mm/yyyy"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/futura_medium_bt"
                 android:text="Address:"
-                android:textSize="16sp"
-                android:textColor="@color/colorBlack"/>
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
 
             <EditText
-                android:id="@+id/etStaff_Editadd_val"
+                android:id="@+id/etStaffEditAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
-                android:hint="sample Address"
+                android:background="@drawable/bg_edittext_transparent"
+                android:fontFamily="@font/futura_medium_bt"
+                android:hint="Address"
                 android:inputType="text"
                 android:textColor="@color/colorBlack"
-                android:fontFamily="@font/futura_medium_bt"
-                android:background="@drawable/bg_edittext_transparent"/>
+                android:textSize="18sp" />
 
             <View
-                android:id="@+id/horDivider4"
+                android:id="@+id/divider7"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
                 android:layout_marginTop="5dp"
-                android:background="?android:attr/listDivider"/>
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/futura_medium_bt"
+                android:text="City:"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etStaffEditCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_edittext_transparent"
+                android:fontFamily="@font/futura_medium_bt"
+                android:hint="Enter City"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/futura_medium_bt"
+                android:text="State:"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etStaffEditState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_edittext_transparent"
+                android:fontFamily="@font/futura_medium_bt"
+                android:hint="Enter State"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/futura_medium_bt"
+                android:text="Pincode:"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etStaffEditPincode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_edittext_transparent"
+                android:fontFamily="@font/futura_medium_bt"
+                android:hint="Enter Pincode"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
 
 
             <TextView
-                android:id="@+id/tvEdit_save"
+                android:id="@+id/tvStaffSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:background="@drawable/button"
                 android:layout_margin="40dp"
-                android:gravity="center"
-                android:text="Save"
-                android:textColor="@color/colorWhite"
+                android:background="@drawable/button"
                 android:fontFamily="@font/futura_medium_bt"
-                android:textAllCaps="false"/>
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Save Changes"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
 
         </LinearLayout>
     </ScrollView>

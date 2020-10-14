@@ -45,7 +45,8 @@ public class EditFactoryActivity extends AppCompatActivity {
             public void onClick(final View view) {
 
                 AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
-                Call<UpdateClientFactory> call = authInterface.clientUpdateFactory(2,2);
+                // TODO: change ids after testing
+                Call<UpdateClientFactory> call = authInterface.clientUpdateFactory(client_id,factory_id);
                 call.enqueue(new Callback<UpdateClientFactory>() {
                     @Override
                     public void onResponse(Call<UpdateClientFactory> call, Response<UpdateClientFactory> response) {

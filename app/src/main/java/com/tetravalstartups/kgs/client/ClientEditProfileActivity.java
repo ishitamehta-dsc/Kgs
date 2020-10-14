@@ -22,7 +22,7 @@ import org.w3c.dom.Text;
 public class ClientEditProfileActivity extends AppCompatActivity {
     private TextView tvUpdateFact;
     private SharedPreferences preferences;
-    private static final String TAG = "ClientEditProfileActivity";
+    private static final String TAG = "ClientEditProfile";
     int client_id;
 
     @Override
@@ -42,11 +42,12 @@ public class ClientEditProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
-                Call<EditClientProfile> clientProfileCall = authInterface.clientEditProfile(1);
+                // TODO: change id after testing
+                Call<EditClientProfile> clientProfileCall = authInterface.clientEditProfile(client_id);
                 clientProfileCall.enqueue(new Callback<EditClientProfile>() {
                     @Override
                     public void onResponse(Call<EditClientProfile> call, Response<EditClientProfile> response) {
-                        //Log.e(TAG, "onResponse: " + response.code() + response.body() + response.message());
+                        Log.e(TAG, "onResponse: " + response.code() + response.body() + response.message());
                         if (response.code() == 200){
                             Toast.makeText(ClientEditProfileActivity.this, "Your Request has been submitted Successcfully\n Please wait until it gets approved by the Administrator", Toast.LENGTH_SHORT).show();
                         }else if (response.code() == 400){
@@ -61,7 +62,6 @@ public class ClientEditProfileActivity extends AppCompatActivity {
                         Toast.makeText(ClientEditProfileActivity.this, ""+t.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
-
             }
         });
     }

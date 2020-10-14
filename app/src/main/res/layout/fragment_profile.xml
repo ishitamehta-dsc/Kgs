@@ -63,11 +63,11 @@
 <!--                    android:textStyle="bold"/>-->
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/cvClientUserImg"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/user_img">
-                    </de.hdodenhof.circleimageview.CircleImageView>
+                        android:src="@drawable/user_img"></de.hdodenhof.circleimageview.CircleImageView>
 
                     <TextView
                         android:id="@+id/tvName"

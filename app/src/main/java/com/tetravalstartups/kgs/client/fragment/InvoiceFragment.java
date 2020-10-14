@@ -62,7 +62,7 @@ public class InvoiceFragment extends Fragment {
 
         AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
         // <--- TODO ----- change client id tp "client_id" after testing --->
-       final Call<ClientInvoiceList> clientInvoiceListCall = authInterface.clientInvoice(2);
+       final Call<ClientInvoiceList> clientInvoiceListCall = authInterface.clientInvoice(client_id);
 
        clientInvoiceListCall.enqueue(new Callback<ClientInvoiceList>() {
            @Override

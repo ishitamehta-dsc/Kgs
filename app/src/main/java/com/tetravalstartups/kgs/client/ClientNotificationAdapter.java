@@ -14,7 +14,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-class ClientNotificationAdapter extends RecyclerView.Adapter<ClientNotificationAdapter.ClientNotificationViewHolder> {
+public class ClientNotificationAdapter extends RecyclerView.Adapter<ClientNotificationAdapter.ClientNotificationViewHolder> {
     private Context context;
     private List<ClientNotification.Notification> clientNotificationList;
 

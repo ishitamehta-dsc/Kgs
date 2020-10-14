@@ -2,8 +2,12 @@ package com.tetravalstartups.kgs.auth.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -26,15 +30,21 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.tetravalstartups.kgs.ApiClient;
 import com.tetravalstartups.kgs.R;
 import com.tetravalstartups.kgs.auth.model.CheckUser;
 import com.tetravalstartups.kgs.common.SplashActivity;
+import com.tetravalstartups.kgs.staff.DashstaffActivity;
 
 import java.util.concurrent.TimeUnit;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText etMobile;
     private TextView tvCont;
+    private final static String country = "+91";
+    private FirebaseAuth firebaseAuth;
+    private String phone;
+    private static final String TAG = "LoginActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +56,8 @@ public class LoginActivity extends AppCompatActivity {
     private void init() {
         etMobile = findViewById(R.id.etMobile);
         tvCont = findViewById(R.id.tvCont);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         tvCont.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,13 +79,53 @@ public class LoginActivity extends AppCompatActivity {
                     etMobile.setError("Mobile Number must contain 10 digits");
                     return;
                 }
-
                 sendUserOtpScreen(mobile);
+                //checkUser();
 
             }
         });
 
     }
+
+//    private void checkUser() {
+//
+//        AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
+//        // <--- TODO ----- change id tp "phone" after testing --->
+//        Call<CheckUser> call = authInterface.checkUser("8888888888");
+//        call.enqueue(new Callback<CheckUser>() {
+//            @Override
+//            public void onResponse(Call<CheckUser> call, Response<CheckUser> response) {
+//                Log.e(TAG, "onResponse: "+response.code()+response.message() );
+//                if (response.code() == 200){
+//                    if (response.body().getType() == 1){
+//                    Toast.makeText(LoginActivity.this, "Successful as client", Toast.LENGTH_SHORT).show();
+//                    SharedPreferences preferences = getSharedPreferences("login", 0);
+//
+//                    }
+//                    else if (response.body().getType() == 2){
+//                        Toast.makeText(LoginActivity.this, "successfull as staff", Toast.LENGTH_SHORT).show();
+//                      Intent intent = new Intent(LoginActivity.this, OtpActivity.class);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                        startActivity(new Intent(intent));
+//                        finish();
+//                }
+//                    Intent intent = new Intent(LoginActivity.this, OtpActivity.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    intent.putExtra("phone", phone);
+//                    startActivity(new Intent(intent));
+//                    finish();
+//
+//                }else if (response.code() == 400){
+//                    Toast.makeText(LoginActivity.this, "User does not exist please contact admin", Toast.LENGTH_LONG).show();
+//                }
+//            }
+
+//            @Override
+//            public void onFailure(Call<CheckUser> call, Throwable t) {
+//                Log.e(TAG, "onFailure: "+t.getMessage());
+//            }
+//        });
+//    }
 
     private void sendUserOtpScreen(String mobile) {
         Intent intent = new Intent(LoginActivity.this, OtpActivity.class);
@@ -81,7 +133,7 @@ public class LoginActivity extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         intent.putExtra("phone", mobile);
         startActivity(intent);
-        //finish();
+        finish();
     }
 
 }

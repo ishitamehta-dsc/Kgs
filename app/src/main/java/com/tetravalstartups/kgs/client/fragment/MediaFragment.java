@@ -65,7 +65,7 @@ public class MediaFragment extends Fragment {
 
         AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
         // <--- TODO ----- change client id tp "client_id" after testing --->
-        Call<List<ClientMedia>> clientMediaCall = authInterface.clientMedia(1);
+        Call<List<ClientMedia>> clientMediaCall = authInterface.clientMedia(client_id);
         clientMediaCall.enqueue(new Callback<List<ClientMedia>>() {
             @Override
             public void onResponse(Call<List<ClientMedia>> call, Response<List<ClientMedia>> response) {

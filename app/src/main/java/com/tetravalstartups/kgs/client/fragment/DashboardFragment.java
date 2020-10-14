@@ -72,7 +72,7 @@ public class DashboardFragment extends Fragment {
 
         AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
         //<--- TODO: ----- change client id tp "client_id" after testing --->
-        Call<ClientDashboard> call = authInterface.clientDashboard(1);
+        Call<ClientDashboard> call = authInterface.clientDashboard(id);
         call.enqueue(new Callback<ClientDashboard>() {
             @Override
             public void onResponse(Call<ClientDashboard> call, Response<ClientDashboard> response) {
@@ -96,6 +96,7 @@ public class DashboardFragment extends Fragment {
             }
         });
 
+        // TODO: change ids after testing
         Call<ClientPayment> call1 = authInterface.clientPayment(1);
         call1.enqueue(new Callback<ClientPayment>() {
             @Override

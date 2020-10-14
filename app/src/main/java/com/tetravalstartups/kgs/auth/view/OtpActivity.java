@@ -122,7 +122,7 @@ public class OtpActivity extends AppCompatActivity {
             @Override
             public void onVerificationFailed(@NonNull FirebaseException e) {
                 if (e instanceof FirebaseAuthInvalidCredentialsException) {
-                    Snackbar.make(lvCode, "Invalid Credentials", Snackbar.LENGTH_SHORT).show();
+                    //Snackbar.make(lvCode, "Invalid Credentials", Snackbar.LENGTH_SHORT).show();
                 } else if (e instanceof FirebaseTooManyRequestsException) {
                     Snackbar.make(lvCode, "Limit Reached Try Again In a few Hours", Snackbar.LENGTH_LONG).show();
                 }
@@ -173,14 +173,14 @@ public class OtpActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Snackbar.make(lvCode, "Successful", Snackbar.LENGTH_LONG).show();
+                            //Snackbar.make(lvCode, "Successful", Snackbar.LENGTH_LONG).show();
                             String cred = task.getResult().getUser().getPhoneNumber();
                             cred.replace("+91", "");
                             checkUser();
                         } else {
                             if (task.getException() instanceof
                                     FirebaseAuthInvalidCredentialsException) {
-                                Snackbar.make(lvCode, "Invalid Credentials", Snackbar.LENGTH_LONG).show();
+                                //Snackbar.make(lvCode, "Invalid Credentials", Snackbar.LENGTH_LONG).show();
                             }
                         }
                     }
@@ -191,12 +191,13 @@ public class OtpActivity extends AppCompatActivity {
     private void checkUser() {
         AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
 
-        // <--- TODO ----- change client id tp "client_id" after testing --->
-        Call<CheckUser> call = authInterface.checkUser("1212457896");
+        // <--- TODO ----- change id tp "phone" after testing --->
+        Call<CheckUser> call = authInterface.checkUser("8888888888");
         call.enqueue(new Callback<CheckUser>() {
             @Override
             public void onResponse(Call<CheckUser> call, Response<CheckUser> response) {
                 Log.e(TAG, "onResponse: "+response.code()+response.message() );
+
                 if (response.code() == 200) {
                     CheckUser checkUser = response.body();
                     if (response.body().getType() == 1) {

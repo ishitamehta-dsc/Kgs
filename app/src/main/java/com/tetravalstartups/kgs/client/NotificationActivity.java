@@ -31,8 +31,6 @@ public class NotificationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
-
-
         initViews();
 
     }
@@ -53,7 +51,7 @@ public class NotificationActivity extends AppCompatActivity {
         AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
         // <--- TODO ----- change client id tp "client_id" after testing --->
 
-        Call<ClientNotification> call = authInterface.clientNotification(1);
+        Call<ClientNotification> call = authInterface.clientNotification(client_id);
         call.enqueue(new Callback<ClientNotification>() {
             @Override
             public void onResponse(Call<ClientNotification> call, Response<ClientNotification> response) {

@@ -10,6 +10,8 @@ import com.tetravalstartups.kgs.auth.model.ClientPayment;
 import com.tetravalstartups.kgs.auth.model.ClientProfileDetail;
 import com.tetravalstartups.kgs.auth.model.ClientSubscriptionList;
 import com.tetravalstartups.kgs.auth.model.EditClientProfile;
+import com.tetravalstartups.kgs.auth.model.StaffDashboard;
+import com.tetravalstartups.kgs.auth.model.StaffNotification;
 import com.tetravalstartups.kgs.auth.model.StaffProfileDetail;
 import com.tetravalstartups.kgs.auth.model.UpdateClientFactory;
 import com.tetravalstartups.kgs.client.EditFactoryActivity;
@@ -72,5 +74,13 @@ public interface AuthInterface {
     @FormUrlEncoded
     @POST("auth/updateProfile")
     Call<EditClientProfile> clientEditProfile(@Field("client_id") int client_id);
+
+    @FormUrlEncoded
+    @POST("auth/StaffDashboard")
+    Call<StaffDashboard> staffDashboard(@Field("staff_id") int staff_id);
+
+    @FormUrlEncoded
+    @POST("auth/StaffNotificationList")
+    Call<StaffNotification> staffNotification(@Field("staff_id") int staff_id);
 
 }

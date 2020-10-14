@@ -1,6 +1,7 @@
 package com.tetravalstartups.kgs.staff;
 
 import androidx.appcompat.app.AppCompatActivity;
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -26,11 +27,19 @@ import java.util.Objects;
 public class StaffprofileActivity extends AppCompatActivity {
 
         private ImageView ivProfileback;
-        private TextView tvStaffedit;
-        private TextView tvStaff_profilename;
-        private TextView tvStaff_profilenumber;
-        private TextView tvStaff_profileemail;
-        private TextView tvStaffprofadd;
+        private CircleImageView cvStaffUserImg;
+        private TextView tvStaffEdit;
+        private TextView tvStaffName;
+        private TextView tvStaffMob1;
+        private TextView tvStaffMob2;
+        private TextView tvStaffEmail;
+        private TextView tvStaffGender;
+        private TextView tvStaffDob;
+        private TextView tvStaffAddress;
+        private TextView tvStaffCity;
+        private TextView tvStaffState;
+        private TextView tvStaffPincode;
+
         private SharedPreferences preferences;
         private int staff_id;
     private static final String TAG = "StaffProfileActivity";
@@ -46,12 +55,18 @@ public class StaffprofileActivity extends AppCompatActivity {
     private void initViews() {
 
         ivProfileback = findViewById(R.id.ivProfileback);
-        tvStaffedit = findViewById(R.id.tvStaffedit);
-        tvStaff_profilename = findViewById(R.id.tvStaff_profilename);
-        tvStaff_profilenumber = findViewById(R.id.tvStaff_profilenumber);
-        tvStaff_profileemail = findViewById(R.id.tvStaff_profileemail);
-        tvStaffprofadd = findViewById(R.id.tvStaffprofadd);
-        tvStaffedit = findViewById(R.id.tvStaffedit);
+        tvStaffEdit = findViewById(R.id.tvStaffEdit);
+        cvStaffUserImg = findViewById(R.id.cvStaffUserImg);
+        tvStaffName = findViewById(R.id.tvStaffName);
+        tvStaffMob1 = findViewById(R.id.tvStaffMob1);
+        tvStaffMob2 = findViewById(R.id.tvStaffMob2);
+        tvStaffEmail = findViewById(R.id.tvStaffEmail);
+        tvStaffGender = findViewById(R.id.tvStaffGender);
+        tvStaffDob = findViewById(R.id.tvStaffDob);
+        tvStaffAddress = findViewById(R.id.tvStaffAddress);
+        tvStaffCity = findViewById(R.id.tvStaffCity);
+        tvStaffState = findViewById(R.id.tvStaffState);
+        tvStaffPincode = findViewById(R.id.tvStaffPincode);
 
         preferences = this.getSharedPreferences("login", 0);
         staff_id = preferences.getInt("id", 0);
@@ -64,7 +79,7 @@ public class StaffprofileActivity extends AppCompatActivity {
             }
         });
 
-        tvStaffedit.setOnClickListener(new View.OnClickListener() {
+        tvStaffEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(StaffprofileActivity.this, Staff_EditprofileActivity.class));
@@ -78,10 +93,17 @@ public class StaffprofileActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<StaffProfileDetail> call, Response<StaffProfileDetail> response) {
                 if (response.code() == 200) {
-                    tvStaff_profilename.setText(response.body().getData().getFname());
-                    tvStaff_profilenumber.setText(response.body().getData().getMobile1());
-                    tvStaff_profileemail.setText(response.body().getData().getEmail());
-                    tvStaffprofadd.setText(response.body().getData().getAddress());
+                    tvStaffName.setText(response.body().getData().getFname());
+                    tvStaffMob1.setText(response.body().getData().getMobile1());
+                    tvStaffMob2.setText(response.body().getData().getMobile2());
+                    tvStaffEmail.setText(response.body().getData().getEmail());
+                    tvStaffGender.setText(""+response.body().getData().getGender());
+                    tvStaffDob.setText(response.body().getData().getDob());
+                    tvStaffAddress.setText(response.body().getData().getAddress());
+                    tvStaffCity.setText(response.body().getData().getCity());
+                    tvStaffState.setText(response.body().getData().getState());
+                    tvStaffPincode.setText(response.body().getData().getPincode());
+
                 } else if (response.code() == 400){
                     Toast.makeText(StaffprofileActivity.this, "No Data", Toast.LENGTH_LONG).show();
                 }else {

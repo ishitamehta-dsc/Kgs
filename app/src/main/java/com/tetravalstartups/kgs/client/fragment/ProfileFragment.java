@@ -81,7 +81,7 @@ public class ProfileFragment extends Fragment {
 
         AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
         // TODO: ----- Change client id to "client_id" after testing
-        Call<ClientProfileDetail> clientProfileDetailCall = authInterface.clientProfileDetail(2);
+        Call<ClientProfileDetail> clientProfileDetailCall = authInterface.clientProfileDetail(client_id);
         clientProfileDetailCall.enqueue(new Callback<ClientProfileDetail>() {
             @Override
             public void onResponse(Call<ClientProfileDetail> call, Response<ClientProfileDetail> response) {

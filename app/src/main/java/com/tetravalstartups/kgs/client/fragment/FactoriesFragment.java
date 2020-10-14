@@ -65,7 +65,7 @@ public class FactoriesFragment extends Fragment {
 
         AuthInterface authInterface = ApiClient.getClient().create(AuthInterface.class);
         // <--- TODO ----- change client id tp "client_id" after testing --->
-        Call<ClientFactoryList> clientFactoryListCall = authInterface.clientFactory(2);
+        Call<ClientFactoryList> clientFactoryListCall = authInterface.clientFactory(client_id);
 
         clientFactoryListCall.enqueue(new Callback<ClientFactoryList>() {
             @Override
